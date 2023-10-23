@@ -111,6 +111,8 @@ end
 M.rand_colorscheme = function()
   local colorscheme = utils.rand_element(vim.tbl_keys(M.colorscheme2dir))
 
+  colorscheme = "catppuccin"
+
   if not vim.tbl_contains(vim.tbl_keys(M), colorscheme) then
     local msg = "Invalid colorscheme: " .. colorscheme
     vim.notify(msg, vim.log.levels.ERROR, { title = "nvim-config" })
